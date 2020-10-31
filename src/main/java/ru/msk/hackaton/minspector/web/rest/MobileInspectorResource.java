@@ -32,7 +32,7 @@ public class MobileInspectorResource {
         return service.getMiTasks(request);
     }
 
-    @PostMapping(path = "/saveAssesment")
+    @PostMapping(path = "/savetask")
     public JsonNode saveTask(@RequestBody JsonNode json) {
         return processService.saveTask(json);
     }
