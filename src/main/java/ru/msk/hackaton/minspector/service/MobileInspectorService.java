@@ -50,6 +50,9 @@ public class MobileInspectorService {
         tasks.forEach(task -> {
             ObjectNode objectNode = task.getTask().get("properties").deepCopy();
             objectNode.put("inspector", task.getTask().get("inspector").textValue());
+            if(task.getTask().has("assesmentList")) {
+                objectNode.putPOJO("assesmentList", task.getTask().get("assesmentList"));
+            }
             result.add(objectNode);
         });
 

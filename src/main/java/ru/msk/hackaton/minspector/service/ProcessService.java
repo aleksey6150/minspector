@@ -58,10 +58,10 @@ public class ProcessService {
     public ObjectNode processWorkMock(JsonNode source) {
         ObjectNode editable = source.deepCopy();
         ObjectNode assesmentList = objectMapper.createObjectNode();
-        assesmentList.put("carriageway", (int) (Math.random() * 100));
-        assesmentList.put("border_stone", (int) (Math.random() * 100));
-        assesmentList.put("lamp_posts", (int) (Math.random() * 100));
-        assesmentList.put("man_hole", (int) (Math.random() * 100));
+        assesmentList.put("carriageway", (int) (Math.random() * 10) * 10);
+        assesmentList.put("border_stone", (int) (Math.random() * 10) * 10);
+        assesmentList.put("lamp_posts", (int) (Math.random() * 10) * 10);
+        assesmentList.put("man_hole", (int) (Math.random() * 10) * 10);
 
         editable.putPOJO("assesmentList", assesmentList);
 
